@@ -8,12 +8,6 @@ echo "=================="
 echo "Repo init success"
 echo "=================="
 
-# Local manifests
-git clone https://github.com/germaniumsculk/local_manifests_lavender .repo/local_manifests -b axion-2.x
-echo "============================"
-echo "Local manifest clone success"
-echo "============================"
-
 # Build Sync
 /opt/crave/resync.sh 
 echo "============="
