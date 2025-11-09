@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm -rf .repo/local_manifests/
-
 # repo init rom
 repo init -u https://github.com/HinohArata/arrow_manifest.git -b arrow-13.1_ext --depth 1 --git-lfs
 echo "=================="
