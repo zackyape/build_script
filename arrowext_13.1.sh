@@ -7,7 +7,7 @@ echo "Repo init success"
 echo "=================="
 
 # Build Sync
-/opt/crave/resync.sh 
+repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync  
 echo "============="
 echo "Sync success"
 echo "============="
@@ -23,7 +23,7 @@ source build/envsetup.sh
 echo "============="
 
 # Lunch
-lunch arrow_vayu
+lunch arrow_vayu-userdebug
 
 # Build
 m bacon
