@@ -10,7 +10,7 @@ echo "Repo init success"
 echo "=================="
 
 # clone local_manifests
-git clone https://github.com/zackyape/local_manifests.git -b arrow .repo/local_manifests
+git clone https://github.com/zackyape/local_manifests.git -b arrow .repo/local_manifests/
 echo "=================="
 echo "Local manifests clone success"
 echo "=================="
@@ -23,7 +23,7 @@ echo "============="
 # Export
 export BUILD_USERNAME=Zacky 
 export BUILD_HOSTNAME=crave
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 echo "======= Export Done ======"
 
 # Set up build environment
