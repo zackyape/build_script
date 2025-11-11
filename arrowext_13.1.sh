@@ -1,21 +1,28 @@
 #!/bin/bash
 
+# remove old manifests
+rm -rf .repo/local_manifests/
+
 # repo init rom
-repo init -u https://github.com/HinohArata/arrow_manifest.git -b arrow-13.1_ext --depth 1 --git-lfs
+repo init -u https://github.com/ArrowOS-T/android_manifest.git -b arrow-13.1_ext --depth 1 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
+# clone local_manifests
+git clone https://github.com/zackyape/local_manifests.git .repo/local_manifests
+echo "=================="
+echo "Local manifests clone success"
+echo "=================="
+
 # Build Sync
-repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync  
-echo "============="
+/opt/crave/resync.sh
 echo "Sync success"
 echo "============="
 
 # Export
 export BUILD_USERNAME=Zacky 
 export BUILD_HOSTNAME=crave
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 echo "======= Export Done ======"
 
 # Set up build environment
@@ -24,6 +31,11 @@ echo "============="
 
 # Lunch
 lunch arrow_vayu-userdebug
+echo "============"
+
+#Make clean install
+make installclean
+echo "============="
 
 # Build
 m bacon
