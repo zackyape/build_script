@@ -4,13 +4,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/ArrowOS-T/android_manifest.git -b arrow-13.1_ext --depth 1 --git-lfs
+repo init -u https://github.com/ArrowOS-T/android_manifest -b arrow-13.1_ext --depth 1 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # clone local_manifests
-git clone https://github.com/zackyape/local_manifests.git -b arrow .repo/local_manifests/
+git clone https://github.com/zackyape/local_manifests -b arrow .repo/local_manifests/
 echo "=================="
 echo "Local manifests clone success"
 echo "=================="
