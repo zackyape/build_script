@@ -10,7 +10,11 @@ echo "Repo init success"
 echo "=================="
 
 # clone local_manifests
-git clone https://github.com/zackyape/local_manifests -b arrow .repo/local_manifests/
+git clone https://github.com/zackyape/android_device_xiaomi_vayu_arrow -b arrow-13.1 device/xiaomi/vayu
+git clone https://github.com/bagaskara815/vendor_xiaomi_vayu-miuicamera vendor/xiaomi/vayu-miuicamera
+git clone https://github.com/arrowos-devices/android_vendor_xiaomi_vayu -b arrow-13.1 vendor/xiaomi/vayu
+git clone https://github.com/arrowos-devices/android_kernel_xiaomi_vayu -b arrow-13.1 kernel/xiaomi/vayu
+git clone https://github.com/arrowos-devices/android_hardware_xiaomi -b arrow-13.1 hardware/xiaomi/
 echo "=================="
 echo "Local manifests clone success"
 echo "=================="
