@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ncurses5
+sudo apt-get install -y libncurses5 lib32ncurses5-dev
+
 # remove old manifests
 rm -rf .repo/local_manifests/
 
